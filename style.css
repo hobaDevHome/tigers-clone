@@ -1,0 +1,705 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap");
+
+/* Base Styling */
+:root {
+  --foshia: #ed088c;
+  --orange: #fec01e;
+  --orange2: #f89834;
+  --orange3: #f36c42;
+  --mainBlue: #005699;
+  --footerGrey: #f2f2f2;
+  --textGrey: #666666;
+  --maxwidth: 1200px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+body {
+  position: relative;
+}
+a {
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+.main {
+  width: 70%;
+  margin: 0 auto;
+}
+/* ======================================================
+====================================================== */
+/* Scroll top */
+.scrolltop {
+  position: fixed;
+  right: 1rem;
+  bottom: -5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.3rem;
+  background: #ebebeb;
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  z-index: 10;
+  transition: 0.4s;
+  visibility: hidden;
+}
+
+.scrolltop__icon {
+  font-size: 2rem;
+  font-weight: 200;
+  color: var(--textGrey);
+}
+
+/* Show scrolltop */
+.show-scroll {
+  visibility: visible;
+  bottom: 5%;
+}
+
+/* ======================================================
+====================================================== */
+/* <!-- ============== welcome row =============== --> */
+.welcome {
+  background-color: var(--footerGrey);
+  width: 100%;
+  margin: 0;
+}
+.row1 {
+  padding: 5px 0;
+  width: 60%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 10px;
+}
+.welcome-links {
+  margin-left: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.welcome-links ul {
+  list-style: none;
+  margin: 0;
+  color: var(--textGrey);
+}
+.welcome-links ul li {
+  display: inline-block;
+  margin-right: 20px;
+}
+.welcome-links ul li a {
+  color: var(--mainBlue);
+  text-transform: uppercase;
+}
+.shop {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.shop p {
+  margin: 0;
+  font-size: 10px;
+  color: var(--foshia);
+  font-style: italic;
+}
+/* ======================================================
+========================hiddedn form ==================== */
+.hidden-form {
+  width: 90%;
+  border: 1px solid gainsboro;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px;
+  margin: 5px auto;
+  display: none;
+}
+
+.hidden-form input {
+  width: 9%;
+  margin-right: 5px;
+  border: none;
+  padding: 0 10px;
+}
+.hidden-form input::placeholder {
+  font-size: 12px;
+}
+.hidden-form i {
+  font-size: 20px;
+  color: var(--mainBlue);
+}
+.show-form {
+  display: block;
+}
+/* ======================================================
+====================================================== */
+/* <!-- ============== title row =============== --> */
+.title-menu {
+  display: none;
+}
+.title {
+  max-width: var(--maxwidth);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+.title form {
+  max-width: 180px;
+  border: 1px solid gainsboro;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px;
+}
+
+.title form input {
+  width: 100%;
+  margin-right: 5px;
+  border: none;
+  padding: 0 10px;
+}
+.title form input::placeholder {
+  font-size: 12px;
+}
+.title form i {
+  font-size: 20px;
+  color: var(--mainBlue);
+}
+.title h1 {
+  color: var(--mainBlue);
+  font-family: Helvetica, sans-serif;
+}
+.title .cart {
+  max-width: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.cart h5 {
+  color: var(--textGrey);
+  font-size: 12px;
+  margin-right: 10px;
+}
+.carticon {
+  position: relative;
+}
+.carticon i {
+  color: var(--mainBlue);
+  font-size: 25px;
+  margin-left: 10px;
+}
+.badg {
+  position: absolute;
+  top: 15px;
+  left: 5px;
+  z-index: 10;
+  font-size: 12px;
+  width: 16px;
+  height: 16px;
+  border-radius: 8px;
+  background-color: var(--foshia);
+  text-align: center;
+  color: white;
+}
+/* ======================================================
+====================================================== */
+/* <!-- ============== nav bar =============== --> */
+
+#home {
+  max-width: var(--maxwidth);
+  margin: 0 auto;
+  padding-top: 20px;
+  justify-content: center;
+}
+
+#navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding-top: 10px;
+  position: relative;
+  align-self: center;
+}
+#menu {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  display: none;
+  z-index: 10;
+  color: var(--textGrey);
+}
+.showmenu #men {
+  left: 10%;
+}
+#men {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#men li {
+  display: inline-block;
+  margin-right: 10px;
+  color: var(--textGrey);
+}
+.link {
+  color: var(--textGrey);
+  font-size: 15px;
+  transition: all 0.5s;
+  position: relative;
+  transition: all 0.5s;
+}
+.link:hover {
+  border-bottom: 4px solid var(--mainBlue);
+  border-radius: 0;
+}
+
+/* ======================================================
+====================================================== */
+/* <!-- ============== 850 offer row =============== --> */
+.fullscreen-img {
+  max-width: var(--maxwidth);
+  margin: 0 auto;
+  margin-top: 20px;
+  justify-content: center;
+  align-items: center;
+}
+.fullscreen-img img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* ======================================================
+====================================================== */
+/* <!-- ============== shop row =============== --> */
+.shop-now {
+  max-width: 800px;
+  margin: 0 auto;
+}
+.shop-now ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+.shop-now ul li {
+  display: inline-block;
+}
+
+.shop-now ul li a {
+  color: var(--mainBlue);
+  font-size: 14px;
+}
+
+/* ======================================================
+====================================================== */
+/* <!-- ============== mix and match offer row =============== --> */
+.less-full {
+  max-width: 1000px;
+}
+/* ======================================================
+====================================================== */
+/* <!-- ============== opetions blocks =============== --> */
+.options {
+  max-width: 1000px;
+  margin: 20px auto;
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+.option-button {
+  background-color: black;
+  text-transform: uppercase;
+  margin: 5px 10px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.option-button a {
+  color: white;
+}
+.option-button a:hover {
+  color: var(--mainBlue);
+}
+
+/* ======================================================
+====================================================== */
+/* <!-- ============== products slider =============== --> */
+.products-carousel {
+  max-width: 1000px;
+  margin: 50px auto;
+}
+.products-carousel h3 {
+  text-align: center;
+  color: var(--textGrey);
+  margin-bottom: 30px;
+}
+.slider {
+  width: 100%;
+  height: 300px;
+  position: relative;
+  margin: auto;
+  overflow-x: scroll;
+  overflow-y: hidden;
+}
+
+.slider::-webkit-scrollbar {
+  display: none;
+}
+.slider .slide::-webkit-scrollbar {
+  display: none;
+}
+
+.slider .slide {
+  display: flex;
+  position: absolute;
+  left: 0;
+  transition: 0.3s left ease-in-out;
+  overflow-x: scroll;
+  overflow-y: hidden;
+}
+
+.slider .item {
+  margin-right: 10px;
+  max-width: 200px;
+  margin-left: 30px;
+}
+img.item {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.slider .item:last-child {
+  margin-right: 0;
+}
+
+.ctrl {
+  text-align: center;
+  margin-top: 5px;
+}
+
+.ctrl-btn {
+  min-width: 50px;
+  border: none;
+  font-weight: 600;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  position: absolute;
+  top: 50%;
+  margin-top: -18px;
+  font-size: 40px;
+}
+
+.ctrl-btn.pro-prev {
+  left: 0;
+}
+
+.ctrl-btn.pro-next {
+  right: 0;
+}
+/* ======================================================
+====================================================== */
+/* <!-- ============== slogan block =============== --> */
+
+.slogan {
+  max-width: 1000px;
+  margin: 30px auto !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: var(--textGrey);
+}
+.slogan h3 {
+  margin-top: 20px;
+  text-align: center;
+}
+.slogan p {
+  font-size: 14px;
+  line-height: 1.5;
+  text-align: center;
+}
+/* ======================================================
+==================== footer ========================= */
+
+.footer-container {
+  width: 100%;
+  border-top: 2px solid var(--mainBlue);
+}
+.footer {
+  max-width: var(--maxwidth);
+  margin: 0 auto;
+  display: grid;
+  gap: 15px;
+  padding: 10px 20px;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+}
+
+.footer-col h4 {
+  font-size: 12px;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: black;
+}
+.footer-col ul {
+  list-style: none;
+  margin-left: 0;
+  padding: 0;
+  font-size: 12px;
+}
+.footer-col ul li a {
+  color: #6d6767;
+  line-height: 1.8;
+}
+.footer-col ul li a:hover {
+  color: var(--mainBlue);
+}
+.footer-col p {
+  margin-top: 0;
+  font-size: 10px;
+  color: #6d6767;
+}
+.socail-links {
+  display: flex;
+  align-self: center;
+
+  padding: 0;
+  margin-bottom: 0;
+}
+.socail-link {
+  width: 20px;
+  height: 35px;
+  margin-top: 0;
+
+  margin-right: 15px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.socail-link:hover {
+  opacity: 0.7;
+}
+
+.singup {
+  width: 100%;
+  border: 1px solid rgb(218, 215, 215);
+  height: 40px;
+  display: flex;
+  align-items: center;
+}
+.singup input {
+  width: 60%;
+  border: none;
+  padding: 5px;
+}
+.singup input::placeholder {
+  font-size: 10px;
+}
+.singup-button {
+  height: 100%;
+  width: 40%;
+  background-color: #333333;
+  font-size: 12px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+.langs {
+  margin-top: 30px;
+  font-size: 12px;
+  margin-bottom: 20px;
+}
+
+.en {
+  color: var(--textGrey);
+}
+.ar {
+  color: var(--mainBlue);
+  font-size: 14px;
+  font-weight: bold;
+  text-decoration: underline;
+}
+.hap img {
+  width: 70%;
+}
+/* ======================================================
+===================== follow us ===================== */
+.follow-us {
+  max-width: var(--maxwidth);
+  margin: 50px auto;
+  display: flex;
+  align-items: center;
+}
+.follow-tex {
+  margin-left: 50px;
+  margin-right: 20px;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+.social-links i {
+  font-size: 25px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+/* ======================================================
+===================== signature ===================== */
+
+.signature {
+  width: 100%;
+  display: grid;
+  gap: 10px;
+  grid-template-columns: 1fr 2fr 1fr;
+  border-top: 3px solid black;
+}
+.dontate-div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 20px 0;
+}
+.dontate-div a {
+  width: fit-content;
+  padding: 10px 20px;
+  text-align: center;
+  text-transform: uppercase;
+  color: black;
+}
+
+.dontate-div a:nth-child(1) {
+  background-color: var(--orange);
+}
+.dontate-div a:nth-child(2) {
+  background-color: var(--orange2);
+}
+.dontate-div a:nth-child(3) {
+  background-color: var(--orange3);
+}
+.dontate-div a:hover {
+  color: white;
+  background-color: black;
+}
+
+.slogan-div {
+  display: flex;
+  align-items: center;
+}
+.logo-div img {
+  max-width: 80px;
+  height: auto;
+  object-fit: cover;
+}
+.slogan-text {
+  margin-top: 20px;
+  margin-left: 10px;
+  font-size: 10px;
+  color: var(--textGrey);
+}
+
+/* ======================================================
+====================================================== */
+/* Media Queries */
+
+@media only screen and (max-width: 768px) {
+  /* ======================================================
+    ====================== navbar ======================== */
+
+  #menu {
+    display: block;
+  }
+
+  #home {
+    width: 100%;
+    padding-top: 10px;
+  }
+
+  nav {
+    flex-direction: column;
+  }
+  #men {
+    background-color: white;
+    color: var(--textGrey);
+    width: 80%;
+    margin-top: 0;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+    align-items: center;
+    position: absolute;
+    border-radius: 10px;
+    top: -70px;
+    left: -100%;
+    transition: all 0.5s;
+    padding-bottom: 20px;
+  }
+  #men li {
+    display: inline-block;
+    margin-top: 10px;
+  }
+  #men li a {
+    font-weight: 400;
+  }
+  /* ================== follow us =========== */
+  .follow-us {
+    flex-direction: column;
+    justify-content: start;
+    align-items: flex-start;
+    margin-left: 20px;
+  }
+  .follow-tex {
+    margin: 0;
+  }
+
+  /* ================== singatur =========== */
+  .signature {
+    grid-template-columns: 1fr 2fr;
+  }
+}
+/* ======================================================= */
+/* ======================================================= */
+@media only screen and (max-width: 500px) {
+  /* ================== follow us =========== */
+  .follow-us {
+    width: 93%;
+    padding-top: 10px;
+    border-top: 1px solid rgb(201, 193, 193);
+  }
+
+  /* ================== singatur =========== */
+  .signature {
+    grid-template-columns: 1fr;
+  }
+}
