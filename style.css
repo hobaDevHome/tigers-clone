@@ -96,6 +96,62 @@ img {
 }
 
 /* ======================================================
+==================== menu2 ========================= */
+.menu2 {
+  background-color: black;
+  padding: 10px;
+}
+.menu2-content {
+  max-width: 1300px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+}
+.menu2-content ul {
+  list-style: none;
+}
+.menu2-content ul li {
+  display: inline-block;
+  margin-right: 15px;
+}
+.menu2-content ul li a {
+  color: white;
+  text-transform: uppercase;
+  font-size: 14px;
+  opacity: 0.8;
+}
+.menu2-content ul li a:hover {
+  opacity: 1;
+}
+.share-div {
+  display: flex;
+  width: 120px;
+  background-color: rgba(201, 199, 199, 0.2);
+  border: 3px;
+  padding: 10px 15px;
+  cursor: pointer;
+  position: relative;
+}
+.social-links {
+  position: absolute;
+  display: flex;
+  color: white;
+  opacity: 0;
+  z-index: 10;
+}
+.share-this {
+  color: white;
+  text-transform: uppercase;
+}
+.share-div:hover .share-this {
+  opacity: 0;
+}
+.share-div:hover .social-links {
+  opacity: 1;
+}
+
+/* ======================================================
 ==================== section1 ========================= */
 .section1 {
   display: flex;
