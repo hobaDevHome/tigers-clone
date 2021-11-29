@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap");
 
 /* Base Styling */
 :root {
@@ -19,7 +19,7 @@
 }
 
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   margin: 0;
   padding: 0;
 }
@@ -96,6 +96,123 @@ img {
 }
 
 /* ======================================================
+==================== section1 ========================= */
+.section1 {
+  display: flex;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  justify-content: space-between;
+}
+.left-section1 {
+  flex-basis: 50%;
+  padding-left: 150px;
+  padding-top: 50px;
+}
+.left-section1 h6 {
+  margin-top: 20px;
+  text-decoration: underline;
+  margin-bottom: 20px;
+}
+.left-section1 p {
+  font-size: 12px;
+  max-width: 80%;
+}
+.buttons-div {
+  display: flex;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+.btn-sec {
+  padding: 10px 5px;
+  font-weight: 600;
+  margin-right: 10px;
+  cursor: pointer;
+}
+.end {
+  background-color: var(--orange2);
+  color: white;
+}
+.end i {
+  margin-right: 5px;
+}
+.pan {
+  background-color: #d9d6d6;
+
+  margin-right: 10px;
+}
+.right-sections1 {
+  flex-basis: 50%;
+}
+/* ======================================================
+==================== section2 ========================= */
+.section2 {
+  display: flex;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  justify-content: space-between;
+}
+.left2 {
+  flex-basis: 50%;
+  margin: 0;
+}
+.right2 {
+  flex-basis: 50%;
+  background-color: var(--orange2);
+  font-size: 14px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 50px;
+}
+.right2 p {
+  max-width: 80%;
+}
+/* ======================================================
+==================== meet our heros slider ========================= */
+.meet {
+}
+.hero-div {
+}
+.meet-others-div {
+}
+/* ======================================================
+==================== recommendations ========================= */
+.pics-container {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+}
+.rec-conatiner h2 {
+  margin-bottom: 20px;
+}
+.pic-div {
+  position: relative;
+  overflow: hidden;
+  background-color: black;
+  margin-bottom: 30px;
+}
+.pic-div img {
+  transition: all 0.5s;
+  opacity: 0.8;
+}
+.pic-div:hover img {
+  transform: scale(1.1);
+  opacity: 0.4;
+}
+.pic-title {
+  color: white;
+  font-size: 24px;
+  font-weight: 600;
+  text-transform: uppercase;
+  position: absolute;
+  left: 10px;
+  bottom: 20px;
+  cursor: pointer;
+}
+/* ======================================================
 ==================== sign up ========================= */
 .sing-up-contianer {
   padding-top: 10px;
@@ -125,7 +242,7 @@ img {
   transition: all 0.6s;
 }
 .sing-up-btn::before {
-  content: '';
+  content: "";
   width: 118px;
   height: 6px;
   background-color: var(--orange2);
@@ -142,9 +259,10 @@ img {
 ==================== footer ========================= */
 
 .footer-container {
-  max-width: 1400px;
+  max-width: 1200px;
   width: 100%;
   margin: 20px auto;
+  padding: 0 10px;
 }
 .footer {
   width: 100%;
@@ -258,6 +376,32 @@ img {
 /* Media Queries */
 
 @media only screen and (max-width: 768px) {
+  /* ======================================================
+    ====================== section1 ======================== */
+
+  .section1 {
+    flex-direction: column;
+  }
+  .left-section1 {
+    padding-left: 50px;
+    padding-top: 50px;
+    padding-bottom: 10px;
+  }
+
+  /* ======================================================
+==================== section2 ========================= */
+  .section2 {
+    flex-direction: column-reverse;
+  }
+
+  .left2 {
+    flex-basis: 50%;
+  }
+  .right2 {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
   /* ======================================================
     ====================== navbar ======================== */
 
