@@ -33,6 +33,19 @@ $('.contan').click(function(){
 $('iframe').attr('src', $('iframe').attr('src'));
 });
 
+/*==================== who menu ====================*/
+document.querySelector('#who-menu-link').addEventListener('mouseover', () => {
+  
+  document.querySelector('.who-mneu').classList.add('show-who-menu');
+  
+});
+
+document.querySelector('#who-menu-link').addEventListener('mouseleave', () => {
+  
+  document.querySelector('.who-mneu').classList.remove('show-who-menu');
+  
+});
+
 /*==================== sticky-arrow ====================*/
 document.querySelector('#sticky-arrow').addEventListener('click', () => {
   
