@@ -56,6 +56,7 @@ img {
   top: 0;
   left: 0;
   transition: all 0.5s;
+  z-index: 30;
 }
 .move-searvh-bar {
   top: -70px;
@@ -94,9 +95,8 @@ img {
   position: fixed;
   margin-right: 50px;
   height: 100px;
-  top: 70px;
+  top: -700px;
   right: 70px;
-  opacity: 0;
 }
 .search-input-div input {
   height: 50px;
@@ -127,7 +127,7 @@ img {
   user-select: none;
 }
 .search-show {
-  opacity: 1;
+  top: 70px;
 }
 /* ======================================================
 ====================================================== */
@@ -203,7 +203,7 @@ img {
 }
 
 .showmenu #menu-list {
-  left: 0;
+  left: -30px;
 }
 
 /* ======================================================
@@ -367,13 +367,21 @@ img {
   padding: 10px 15px;
   cursor: pointer;
   position: relative;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
 }
-.social-links {
+.social-mneu2 {
   position: absolute;
+  width: 100%;
   display: flex;
   color: white;
   opacity: 0;
   z-index: 10;
+  top: 15px;
+  left: 0;
+  justify-content: space-around;
+  align-items: center;
   transition: all 0.5s;
 }
 .share-this {
@@ -384,7 +392,7 @@ img {
 .share-div:hover .share-this {
   opacity: 0;
 }
-.share-div:hover .social-links {
+.share-div:hover .social-mneu2 {
   opacity: 1;
 }
 
@@ -610,6 +618,7 @@ img {
   text-transform: uppercase;
   font-weight: 600;
 }
+
 .social-links i {
   font-size: 25px;
   margin-right: 10px;
@@ -734,6 +743,11 @@ img {
 /* Media Queries */
 
 @media only screen and (max-width: 768px) {
+  /* ======================================================
+    ====================== search ======================== */
+  .search-bar {
+    display: none;
+  }
   /* ======================================================
     ====================== youtube ======================== */
   .youtube {
@@ -872,6 +886,9 @@ img {
   /* ====================================================== */
 
   /* <!-- ============== menu =============== --> */
+  .menu {
+    margin-top: 0;
+  }
   .mneu-contne {
     justify-content: flex-end;
     padding: 10px;
@@ -880,19 +897,20 @@ img {
   .pand-mneu {
     padding: 0;
     display: flex;
+  }
+  .list-div {
     position: relative;
   }
-
   #menu-list {
+    flex-basis: 100%;
     flex-direction: column;
     position: absolute;
-    min-width: 700px;
+    min-width: 600px;
     background-color: white;
     left: -1000px;
-    top: 60px;
+    top: 80px;
     padding-bottom: 20px;
     transition: all 0.5s;
-    display: flex;
   }
   .menu-list li {
     margin-top: 20px;

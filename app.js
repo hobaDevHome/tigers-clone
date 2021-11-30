@@ -55,6 +55,9 @@ function scrollTop() {
   if (this.scrollY >= 80) {
     scrollTop.classList.add('move-searvh-bar');
     menu1.classList.add('move-menu');
+    document
+      .querySelector('.search-input-div ')
+      .classList.remove('search-show');
   } else {
     scrollTop.classList.remove('move-searvh-bar');
     menu1.classList.remove('move-menu');
