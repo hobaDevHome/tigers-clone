@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600&display=swap");
 
 /* Base Styling */
 :root {
@@ -19,7 +20,7 @@
 }
 
 body {
-  font-family: "Poppins", sans-serif;
+  font-family: "Oswald", sans-serif;
   margin: 0;
   padding: 0;
   position: relative;
@@ -32,6 +33,9 @@ html {
 }
 body {
   position: relative;
+}
+ul {
+  list-style: none;
 }
 a {
   text-decoration: none;
@@ -128,23 +132,61 @@ img {
 /* ======================================================
 ====================================================== */
 /* <!-- ============== menu =============== --> */
-
-#home {
+.menu {
+  background-color: white;
+  width: 100%;
+  margin-top: 80px;
+  position: fixed;
+  top: -10px;
+  transition: all 0.5s;
+}
+.move-menu {
+  top: -80px;
+}
+.mneu-contne {
   max-width: var(--maxwidth);
   margin: 0 auto;
-  padding-top: 20px;
+  display: flex;
+  justify-content: space-between !important;
+}
+.pand-mneu {
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+.menu img {
+  width: 30px;
+  height: auto;
+  object-fit: cover;
+}
+.menu ul {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+.menu ul li {
+  display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
+  margin-left: 20px;
+  position: relative;
 }
 
-#navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  padding-top: 10px;
-  position: relative;
-  align-self: center;
+.menu ul li a {
+  color: black;
 }
+.menu ul li i {
+  position: absolute;
+  top: 20px;
+  left: 25px;
+  opacity: 0.6;
+}
+.menu ul li:hover .ri-arrow-down-s-fill {
+  opacity: 1;
+}
+
 #menu {
   position: absolute;
   top: 20px;
@@ -155,28 +197,6 @@ img {
 }
 .showmenu #men {
   left: 10%;
-}
-#men {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-#men li {
-  display: inline-block;
-  margin-right: 10px;
-  color: var(--textGrey);
-}
-.link {
-  color: var(--textGrey);
-  font-size: 15px;
-  transition: all 0.5s;
-  position: relative;
-  transition: all 0.5s;
-}
-.link:hover {
-  border-bottom: 4px solid var(--mainBlue);
-  border-radius: 0;
 }
 
 /* ======================================================
@@ -230,7 +250,7 @@ img {
   padding-left: 10%;
 }
 .hero-left p {
-  font-size: 40px;
+  font-size: 50px;
   max-width: 70%;
   font-weight: bold;
 }
@@ -256,6 +276,7 @@ img {
   font-weight: 600;
   margin-top: 30px;
   position: relative;
+  text-align: center;
 }
 .adobt-btn::before {
   content: "";

@@ -55,9 +55,15 @@ sr.reveal(`.animat`, {
 /*==================== SHOW SCROLL TOP ====================*/
 function scrollTop() {
   const scrollTop = document.getElementById('search-bar');
+  const menu1 = document.getElementById('menu1');
   // When the scroll is higher than 560 viewport height, add the show-scroll class to the a tag with the scroll-top class
-  if (this.scrollY >= 560) scrollTop.classList.add('move-searvh-bar');
-  else scrollTop.classList.remove('move-searvh-bar');
+  if (this.scrollY >= 80) {
+    scrollTop.classList.add('move-searvh-bar');
+    menu1.classList.add('move-menu');
+  } else{ 
+    scrollTop.classList.remove('move-searvh-bar');
+    menu1.classList.remove('move-menu');
+  }
 }
 window.addEventListener('scroll', scrollTop);
 /*==================== products carousel ====================*/
