@@ -45,90 +45,7 @@ img {
   width: 100%;
   height: auto;
 }
-/* ====================================================== */
-/* <!-- ============== search bar =============== --> */
-.search-bar {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  position: fixed;
-  top: 0;
-  left: 0;
-  transition: all 0.5s;
-}
-.move-searvh-bar {
-  top: -70px;
-}
 
-.search-btn-div {
-  background-color: black;
-  display: flex;
-  justify-content: flex-end;
-  user-select: none;
-}
-.search-icons {
-  cursor: pointer;
-  color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  font-size: 20px;
-  padding: 20px;
-  padding-right: 130px;
-}
-.search-icons p {
-  margin: 0;
-  margin-right: 20px;
-  text-transform: uppercase;
-}
-.search-input-div {
-  background-color: white;
-  display: flex;
-  flex-direction: row;
-  width: 70%;
-  align-self: flex-end;
-  padding: 10px;
-  align-items: center;
-  /* position: absolute; */
-  margin-right: 50px;
-  height: 100px;
-  top: 70px;
-  right: 70px;
-  opacity: 0;
-  z-index: 1000 !important;
-}
-.search-input-div input {
-  height: 50px;
-  width: 500px;
-  padding: 10px;
-  border: 1px solid black;
-  margin-right: 20px;
-  outline: none;
-  background-color: white;
-}
-.search-input-div p {
-  height: 50px;
-  margin: 0;
-
-  padding: 10px;
-  border: 1px solid black;
-  text-transform: uppercase;
-  font-weight: bold;
-  cursor: pointer;
-  user-select: none;
-  text-align: center;
-}
-.search-input-div .close {
-  font-size: 40px;
-  position: absolute;
-  right: 80px;
-  cursor: pointer;
-  user-select: none;
-}
-.search-show {
-  opacity: 1;
-}
 /* ======================================================
 ====================================================== */
 /* <!-- ============== menu =============== --> */
@@ -140,7 +57,6 @@ img {
   top: -10px;
   height: 80px;
   transition: all 0.5s;
-  z-index: 20;
 
   padding-top: 10px;
 }
@@ -244,6 +160,89 @@ img {
 }
 .showmenu #men {
   left: 10%;
+}
+/* ====================================================== */
+/* <!-- ============== search bar =============== --> */
+.search-bar {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  left: 0;
+  transition: all 0.5s;
+}
+.move-searvh-bar {
+  top: -70px;
+}
+
+.search-btn-div {
+  background-color: black;
+  display: flex;
+  justify-content: flex-end;
+  user-select: none;
+}
+.search-icons {
+  cursor: pointer;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 20px;
+  padding: 20px;
+  padding-right: 130px;
+}
+.search-icons p {
+  margin: 0;
+  margin-right: 20px;
+  text-transform: uppercase;
+}
+.search-input-div {
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  width: 70%;
+  align-self: flex-end;
+  padding: 10px;
+  align-items: center;
+  position: fixed;
+  margin-right: 50px;
+  height: 100px;
+  top: 70px;
+  right: 70px;
+  opacity: 0;
+}
+.search-input-div input {
+  height: 50px;
+  width: 500px;
+  padding: 10px;
+  border: 1px solid black;
+  margin-right: 20px;
+  outline: none;
+  background-color: white;
+}
+.search-input-div p {
+  height: 50px;
+  margin: 0;
+
+  padding: 10px;
+  border: 1px solid black;
+  text-transform: uppercase;
+  font-weight: bold;
+  cursor: pointer;
+  user-select: none;
+  text-align: center;
+}
+.search-input-div .close {
+  font-size: 40px;
+  position: absolute;
+  right: 80px;
+  cursor: pointer;
+  user-select: none;
+}
+.search-show {
+  opacity: 1;
 }
 
 /* ======================================================
@@ -760,23 +759,32 @@ img {
 /* Media Queries */
 
 @media only screen and (max-width: 768px) {
+  /* ====================================================== */
+
+  /* <!-- ============== menu =============== --> */
+  .menu {
+    display: none;
+  }
+  .search-bar {
+    display: none;
+  }
   /* ======================================================
     ====================== youtube ======================== */
   .youtube {
-    top: 40px;
-    left: 60px;
+    top: 0;
+    left: 0;
   }
   .contan {
-    width: 80%;
+    width: 100%;
   }
   .bg {
-    width: 600px;
-    height: 480px;
+    width: 100%;
   }
 
   /* ======================================================
     ====================== hero ======================== */
   .hero {
+    margin-top: 0;
     flex-direction: column-reverse;
   }
   .hero-left {
@@ -785,7 +793,9 @@ img {
   .hero-left p {
     font-size: 30px;
   }
-
+  .ytframe {
+    width: 100%;
+  }
   /* ======================================================
     ====================== search bar ======================== */
   .search-input-div input {

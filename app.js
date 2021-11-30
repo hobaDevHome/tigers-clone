@@ -45,6 +45,11 @@ document.querySelector('#who-menu-link').addEventListener('mouseleave', () => {
   document.querySelector('.who-mneu').classList.remove('show-who-menu');
   
 });
+document.querySelector('#who-menu-link').addEventListener('click', () => {
+  
+  document.querySelector('.who-mneu').classList.add('show-who-menu');
+  
+});
 
 /*==================== sticky-arrow ====================*/
 document.querySelector('#sticky-arrow').addEventListener('click', () => {
