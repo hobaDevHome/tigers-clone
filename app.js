@@ -1,11 +1,12 @@
-// document.querySelector('#menu').addEventListener('click', () => {
-//   console.log('clicked');
-//   document.querySelector('nav').classList.toggle('showmenu');
-// });
+/*==================== menu icon ====================*/
+document.querySelector('#menu-icon').addEventListener('click', () => {
+  console.log('clicked');
+  document.querySelector('.list-div').classList.toggle('showmenu');
+});
 
-// document.querySelector('#men').addEventListener('click', () => {
-//   document.querySelector('nav').classList.toggle('showmenu');
-// });
+document.querySelector('#menu-list').addEventListener('click', () => {
+  document.querySelector('.list-div').classList.toggle('showmenu');
+});
 
 /*==================== search-btn ====================*/
 document.querySelector('#search-btn-div').addEventListener('click', () => {
@@ -17,43 +18,19 @@ document.querySelector('#close').addEventListener('click', () => {
 });
 
 /*==================== play video ====================*/
-document.querySelector('#play-vid').addEventListener('click', () => {  
-  
+document.querySelector('#play-vid').addEventListener('click', () => {
   document.querySelector('.youtube').classList.add('show-youtube');
 });
-document.querySelector('#bg').addEventListener('click', () => {  
- 
+document.querySelector('#bg').addEventListener('click', () => {
   document.querySelector('.youtube').classList.remove('show-youtube');
-  
-    
 });
 
-$('.contan').click(function(){
- 
-$('iframe').attr('src', $('iframe').attr('src'));
-});
-
-/*==================== who menu ====================*/
-document.querySelector('#who-menu-link').addEventListener('mouseover', () => {
-  
-  document.querySelector('.who-mneu').classList.add('show-who-menu');
-  
-});
-
-document.querySelector('#who-menu-link').addEventListener('mouseleave', () => {
-  
-  document.querySelector('.who-mneu').classList.remove('show-who-menu');
-  
-});
-document.querySelector('#who-menu-link').addEventListener('click', () => {
-  
-  document.querySelector('.who-mneu').classList.add('show-who-menu');
-  
+$('.contan').click(function () {
+  $('iframe').attr('src', $('iframe').attr('src'));
 });
 
 /*==================== sticky-arrow ====================*/
 document.querySelector('#sticky-arrow').addEventListener('click', () => {
-  
   document.querySelector('.sticky-arrow').classList.toggle('arrow-donw');
   document.querySelector('.sticky-body').classList.toggle('body-donw');
 });
@@ -78,7 +55,7 @@ function scrollTop() {
   if (this.scrollY >= 80) {
     scrollTop.classList.add('move-searvh-bar');
     menu1.classList.add('move-menu');
-  } else{ 
+  } else {
     scrollTop.classList.remove('move-searvh-bar');
     menu1.classList.remove('move-menu');
   }
