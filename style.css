@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap');
 
 /* Base Styling */
 :root {
@@ -19,9 +19,10 @@
 }
 
 body {
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
   margin: 0;
   padding: 0;
+  position: relative;
 }
 
 html {
@@ -40,10 +41,95 @@ img {
   width: 100%;
   height: auto;
 }
+/* ====================================================== */
+/* <!-- ============== search bar =============== --> */
+.search-bar {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  left: 0;
+  transition: all 0.5s;
+}
+.move-searvh-bar {
+  top: -70px;
+}
+.move-searvh-btn {
+  /* top: 0; */
+}
+.search-btn-div {
+  background-color: black;
+  display: flex;
+  justify-content: flex-end;
+  user-select: none;
+}
+.search-icons {
+  cursor: pointer;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
+  font-size: 20px;
+  padding: 20px;
+  padding-right: 130px;
+}
+.search-icons p {
+  margin: 0;
+  margin-right: 20px;
+  text-transform: uppercase;
+}
+.search-input-div {
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  width: 70%;
+  align-self: flex-end;
+  padding: 10px;
+  align-items: center;
+  /* position: absolute; */
+  margin-right: 50px;
+  height: 100px;
+  top: 70px;
+  right: 70px;
+  opacity: 0;
+  z-index: 1000 !important;
+}
+.search-input-div input {
+  height: 50px;
+  width: 500px;
+  padding: 10px;
+  border: 1px solid black;
+  margin-right: 20px;
+  outline: none;
+  background-color: white;
+}
+.search-input-div p {
+  height: 50px;
+  margin: 0;
+
+  padding: 10px;
+  border: 1px solid black;
+  text-transform: uppercase;
+  font-weight: bold;
+  cursor: pointer;
+  user-select: none;
+  text-align: center;
+}
+.search-input-div .close {
+  font-size: 40px;
+  position: absolute;
+  right: 80px;
+  cursor: pointer;
+  user-select: none;
+}
+.search-show {
+  opacity: 1;
+}
 /* ======================================================
 ====================================================== */
-/* <!-- ============== nav bar =============== --> */
+/* <!-- ============== menu =============== --> */
 
 #home {
   max-width: var(--maxwidth);
@@ -98,6 +184,7 @@ img {
 /* ======================================================
 ==================== menu2 ========================= */
 .menu2 {
+  margin-top: 80px;
   background-color: black;
   padding: 10px;
 }
@@ -139,10 +226,12 @@ img {
   color: white;
   opacity: 0;
   z-index: 10;
+  transition: all 0.5s;
 }
 .share-this {
   color: white;
   text-transform: uppercase;
+  transition: all 0.5s;
 }
 .share-div:hover .share-this {
   opacity: 0;
@@ -171,7 +260,7 @@ img {
   margin-bottom: 20px;
 }
 .left-section1 p {
-  font-size: 12px;
+  font-size: 0.8rem;
   max-width: 80%;
 }
 .buttons-div {
@@ -298,7 +387,7 @@ img {
   transition: all 0.6s;
 }
 .sing-up-btn::before {
-  content: "";
+  content: '';
   width: 118px;
   height: 6px;
   background-color: var(--orange2);
@@ -428,6 +517,64 @@ img {
 }
 
 /* ======================================================
+==================== sticky note ====================== */
+.sticky {
+  position: relative;
+}
+.sticky-arrow {
+  position: fixed;
+  bottom: 200px;
+  background-color: black;
+  color: white;
+  right: 40px;
+  width: 40px;
+  height: 20px;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  user-select: none;
+}
+.sticky-body {
+  position: fixed;
+  bottom: 0;
+  right: 20px;
+  width: 300px;
+  height: 200px;
+  background-color: black;
+  color: white;
+  padding: 10px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  user-select: none;
+}
+.sticky-body p {
+  font-size: 12px;
+  color: gray;
+}
+.sticky-body p:nth-child(1) {
+  color: white;
+  font-weight: bold;
+}
+.next {
+  background-color: var(--orange2);
+  border-radius: 5px;
+  padding: 5px 10px;
+  align-self: flex-end;
+}
+.body-donw {
+  bottom: -190px;
+}
+.arrow-donw {
+  bottom: 5px;
+}
+/* ======================================================
 ====================================================== */
 /* Media Queries */
 
@@ -456,6 +603,12 @@ img {
   .right2 {
     padding-top: 20px;
     padding-bottom: 20px;
+  }
+  /* ======================================================
+==================== sticky ========================= */
+
+  .sticky {
+    display: none;
   }
 
   /* ======================================================
