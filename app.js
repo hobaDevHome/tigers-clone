@@ -7,15 +7,35 @@
 //   document.querySelector('nav').classList.toggle('showmenu');
 // });
 
+/*==================== search-btn ====================*/
 document.querySelector('#search-btn-div').addEventListener('click', () => {
   document.querySelector('.search-input-div ').classList.toggle('search-show');
 });
+
 document.querySelector('#close').addEventListener('click', () => {
   document.querySelector('.search-input-div ').classList.toggle('search-show');
 });
 
+/*==================== play video ====================*/
+document.querySelector('#play-vid').addEventListener('click', () => {  
+  
+  document.querySelector('.youtube').classList.add('show-youtube');
+});
+document.querySelector('#bg').addEventListener('click', () => {  
+ 
+  document.querySelector('.youtube').classList.remove('show-youtube');
+  
+    
+});
+
+$('.contan').click(function(){
+ 
+$('iframe').attr('src', $('iframe').attr('src'));
+});
+
+/*==================== sticky-arrow ====================*/
 document.querySelector('#sticky-arrow').addEventListener('click', () => {
-  console.log('sticky-arrow clicked');
+  
   document.querySelector('.sticky-arrow').classList.toggle('arrow-donw');
   document.querySelector('.sticky-body').classList.toggle('body-donw');
 });
