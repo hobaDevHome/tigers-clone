@@ -1,3 +1,14 @@
+/*==================== night mode icon ====================*/
+const nightIcon = document.querySelector('#night-icon');
+nightIcon.addEventListener('click', () => {
+  document.body.classList.toggle('dark-theme');
+  if (document.body.classList.contains('dark-theme')) {
+    nightIcon.src = './images/sun.png';
+  } else {
+    nightIcon.src = './images/moon.png';
+  }
+});
+
 /*==================== menu icon ====================*/
 document.querySelector('#menu-icon').addEventListener('click', () => {
   console.log('clicked');
